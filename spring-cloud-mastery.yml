@@ -49,7 +49,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info,metrics,trace,env
+        include: health,info,metrics,prometheus,refresh,trace,env
   metrics:
     tags:
       application: ${spring.application.name}
