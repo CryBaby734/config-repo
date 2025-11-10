@@ -7,6 +7,8 @@ spring:
 
   cloud:
     gateway:
+      default-filters:
+        - name: JwtAuthenticationFilter
       httpclient:
         connect-timeout: 2000
         response-timeout: 3s
