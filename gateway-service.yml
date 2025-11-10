@@ -10,7 +10,9 @@ spring:
       httpclient:
         connect-timeout: 2000
         response-timeout: 3s
+
       routes:
+        # === USER-SERVICE ===
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
@@ -22,11 +24,13 @@ spring:
                 name: userServiceCB
                 fallbackUri: forward:/fallback/users
 
+        # === AUTH-SERVICE ===
         - id: auth-service
-          uri: lb://SPRING-CLOUD-MASTERY
+          uri: lb://AUTH-SERVICE      # исправлено
           predicates:
             - Path=/api/auth/**
           filters:
+            - StripPrefix=1
             - name: CircuitBreaker
               args:
                 name: authServiceCB
@@ -35,7 +39,7 @@ spring:
 management:
   tracing:
     sampling:
-      probability: 1.0  # 1.0 = трассировать все запросы (для dev)
+      probability: 1.0
   zipkin:
     tracing:
       endpoint: http://localhost:9411/api/v2/spans
@@ -46,6 +50,7 @@ management:
   metrics:
     tags:
       application: ${spring.application.name}
+
 logging:
   level:
-    root: DEBUG
+    root: INFO
