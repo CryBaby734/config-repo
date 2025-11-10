@@ -29,7 +29,7 @@ spring:
 
         # === AUTH-SERVICE ===
         - id: auth-service
-          uri: lb://AUTH-SERVICE
+          uri: lb://SPRING-CLOUD-MASTERY
           predicates:
             - Path=/api/auth/**
           filters:

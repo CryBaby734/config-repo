@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: auth-service
+    name: spring-cloud-mastery
 
   datasource:
     url: jdbc:postgresql://localhost:5432/cloud_auth_db
