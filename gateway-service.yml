@@ -63,3 +63,5 @@ management:
 logging:
   level:
     root: INFO
+jwt:
+  secret: pouaiScyrJ8GnN5hlvUBjdf7JTQQI/Ws8CMDgLmH8fs=

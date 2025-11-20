@@ -37,7 +37,7 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
 
 jwt:
-  secret: gTWu/dFHt4PfVHbaVU3lEPUMot8Hu/FoW+zFsmzrGn9sqYpDTS8yRx7JOE3nSsGDe+DYLjvHhQwYYOuhOJ17fw==
+  secret: pouaiScyrJ8GnN5hlvUBjdf7JTQQI/Ws8CMDgLmH8fs=
 
 management:
   tracing:
