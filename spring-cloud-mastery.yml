@@ -54,3 +54,6 @@ management:
     tags:
       application: ${spring.application.name}
 
+    redis:
+      host: localhost
+      port: 6379
