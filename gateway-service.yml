@@ -35,6 +35,13 @@ spring:
                 name: authServiceCB
                 fallbackUri: forward:/fallback/auth
 
+        - id: account-service
+          uri: lb://ACCOUNT-SERVICE
+          predicates:
+            - Path=/api/accounts/**
+          filters:
+            - StripPrefix=1
+
 
 eureka:
   client:
