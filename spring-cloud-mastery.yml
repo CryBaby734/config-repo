@@ -11,7 +11,6 @@ spring:
     password: ${DB_PASS:root7769}
     driver-class-name: org.postgresql.Driver
 
-
   jpa:
     hibernate:
       ddl-auto: update
@@ -19,6 +18,10 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  redis:              # ✅ теперь правильно!
+    host: localhost
+    port: 6379
 
 eureka:
   client:
@@ -29,7 +32,6 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${server.port}
-
 
 logging:
   level:
@@ -42,7 +44,7 @@ jwt:
 management:
   tracing:
     sampling:
-      probability: 1.0  # 1.0 = трассировать все запросы (для dev)
+      probability: 1.0
   zipkin:
     tracing:
       endpoint: http://localhost:9411/api/v2/spans
@@ -53,7 +55,3 @@ management:
   metrics:
     tags:
       application: ${spring.application.name}
-
-    redis:
-      host: localhost
-      port: 6379
