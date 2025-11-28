@@ -11,7 +11,7 @@ spring:
         connect-timeout: 2000
         response-timeout: 3s
       routes:
-        # === USER-SERVICE ===
+        # === USER-SERVICE
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
