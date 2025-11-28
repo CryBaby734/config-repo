@@ -17,6 +17,7 @@ spring:
           predicates:
             - Path=/api/users/**
           filters:
+            - StripPrefix=1
             - name: CircuitBreaker
               args:
                 name: userServiceCB
@@ -28,6 +29,7 @@ spring:
           predicates:
             - Path=/api/auth/**
           filters:
+            - StripPrefix=1
             - name: CircuitBreaker
               args:
                 name: authServiceCB
