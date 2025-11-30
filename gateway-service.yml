@@ -18,7 +18,7 @@ spring:
           predicates:
             - Path=/api/users/**
           filters:
-            - StripPrefix=2
+            - StripPrefix=1
             - name: CircuitBreaker
               args:
                 name: userServiceCB
