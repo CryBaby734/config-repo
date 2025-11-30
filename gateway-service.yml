@@ -25,7 +25,7 @@ spring:
                 fallbackUri: forward:/fallback/users
 
         - id: auth-service
-          uri: lb://SPRING-CLOUD-MASTERY
+          uri: lb://SPRING-CLOUD-MASTERY   # <-- исправь это имя!
           predicates:
             - Path=/api/auth/**
           filters:
@@ -55,6 +55,9 @@ eureka:
     instance-id: ${spring.application.name}:${server.port}
 
 management:
+  health:
+    redis:
+      enabled: false
   endpoints:
     web:
       exposure:
