@@ -59,7 +59,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info,env,metrics,prometheus,gateway,refresh
+        include: "*"
 
 logging:
   level:
