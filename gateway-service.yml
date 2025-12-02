@@ -5,16 +5,11 @@ spring:
   application:
     name: gateway-service
 
-  datasource:
-    url: jdbc:postgresql://localhost:5432/dynamic_route
-    username: postgres
-    password: postgres
-  jpa:
-    hibernate:
-      ddl-auto: none   # gateway only READS
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/dynamic_route
+#    username: postgres
+#    password: postgres
+
 
 
   cloud:
