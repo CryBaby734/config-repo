@@ -9,14 +9,24 @@ spring:
 #    url: jdbc:postgresql://localhost:5432/dynamic_route
 #    username: postgres
 #    password: postgres
+  data:
+    redis:
+      host: localhost
+      port: 6379
 
 
 
-  cloud:
+    cloud:
     gateway:
       httpclient:
         connect-timeout: 2000
         response-timeout: 3s
+
+      data:
+        redis:
+          host: localhost
+          port: 6379
+
 
 #      routes:
 #
