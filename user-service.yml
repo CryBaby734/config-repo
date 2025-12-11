@@ -27,8 +27,8 @@ eureka:
       defaultZone: http://localhost:8761/eureka
 
   instance:
-    hostname: localhost        # 🔥 ОБЯЗАТЕЛЬНО
-    prefer-ip-address: false   # 🔥 ОБЯЗАТЕЛЬНО
+    hostname: localhost
+    prefer-ip-address: false
     instance-id: ${spring.application.name}:${server.port}
 
 management:
