@@ -98,6 +98,10 @@ management:
     tags:
       application: gateway-service
 
+    distribution:
+      percentiles-histogram:
+        gateway_request_duration_seconds: true
+
 logging:
   level:
     root: INFO
