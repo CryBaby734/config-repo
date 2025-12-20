@@ -61,7 +61,6 @@ spring:
 #              args:
 #                name: authServiceCB
 #                fallbackUri: forward:/fallback/auth
-#
 #        - id: account-service
 #          uri: lb://ACCOUNT-SERVICE
 #          predicates:
